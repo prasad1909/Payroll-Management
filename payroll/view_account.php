@@ -79,7 +79,7 @@
       <?php
         $id=$_REQUEST['emp_id'];
         $query = "SELECT * from employee where emp_id='".$id."'";
-        $result = mysqli_query($c,$query) or die ( mysql_error());
+        $result = mysqli_query($c,$query) or die ( mysqli_error());
 
         $query  = mysqli_query($c,"SELECT * from overtime");
         while($row=mysqli_fetch_array($query))

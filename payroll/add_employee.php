@@ -1,8 +1,8 @@
 <?php
-  $conn = mysqli_connect('localhost', 'root', '','payroll');
+  $conn = mysqli_connect('localhost', 'root', 'Praraj19','payroll');
   if (!$conn)
   {
-    die("Database Connection Failed" . mysql_error());
+    die("Database Connection Failed" . mysqli_error());
   }
   if(isset($_POST['submit'])!="")
   {
@@ -12,7 +12,7 @@
     $type       = $_POST['emp_type'];
     $division   = $_POST['division'];
 
-    $sql = mysqli_query($conn,"INSERT into employee(lname, fname, gender, emp_type, division)VALUES('$lname','$fname','$gender', '$type', '$division')");
+    $sql = mysqli_query($conn,"INSERT into employee(lname, fname, gender, emp_type, division, deduction, overtime, bonus)VALUES('$lname','$fname','$gender', '$type', '$division', 0, 0, 0)");
 
     if($sql)
     {

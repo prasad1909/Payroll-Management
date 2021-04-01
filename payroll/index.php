@@ -5,10 +5,10 @@
 
 <?php
 
-  $conn = mysqli_connect('localhost', 'root', '','payroll');
+  $conn = mysqli_connect('localhost', 'root', 'Praraj19', 'payroll');
   if (!$conn)
   {
-    die("Database Connection Failed" . mysql_error());
+    die("Database Connection Failed" . mysqli_error());
   }
 
 
@@ -85,17 +85,17 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>OOP 2</h1>
+        <h1>Payroll Mangement</h1>
         <p class="lead">The Payroll and Management System was created through the use of HTML5, BOOTSTRAP, JQUERY, CSS, and PHP which was a server-side programming language.</p>
-        <p><a data-toggle="modal" class="btn btn-lg btn-success" href="#instructor" role="button">Submitted to:</a></p>
+        <!--<p><a data-toggle="modal" class="btn btn-lg btn-success" href="#instructor" role="button">Submitted to:</a></p> -->
       </div>
 
       <!-- Site footer -->
-      <footer class="footer">
+      <!-- <footer class="footer">
         <p align="center">&copy; All Rights Reserved 2016</p>
         <p align="center">Copyright by <a target="_blank" href="http://www.must.edu.ph" data-show-count="true">Mindanao University of Science and Technology</a></p>
         <p align="center">About the <a target="_blank" href="http://www.facebook.com/colins.sabit">Developer</a></p>
-      </footer>
+      </footer> -->
 
       <!-- this modal is for my INSTRUCTOR -->
       <div class="modal fade" id="instructor" role="dialog">

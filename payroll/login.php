@@ -40,7 +40,7 @@
 
         //Checking is user existing in the database or not
         $query = "SELECT * FROM `user` WHERE username='$username' and password='$password'";
-        $result = mysqli_query($c,$query) or die(mysql_error());
+        $result = mysqli_query($c, $query) or die(mysqli_error());
         $rows = mysqli_num_rows($result);
 
         if($rows==1)

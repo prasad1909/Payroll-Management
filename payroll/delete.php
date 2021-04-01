@@ -3,6 +3,6 @@
 	
 	$id=$_GET['emp_id'];
 	$query = "DELETE FROM employee WHERE emp_id=$id"; 
-	$result = mysql_query($query) or die ( mysql_error());
+	$result = mysqli_query($c, $query) or die ( mysqli_error());
 	header("Location: home_employee.php"); 
  ?>

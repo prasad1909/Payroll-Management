@@ -2,8 +2,8 @@
   include("db.php"); //include auth.php file on all secure pages
   include("auth.php");
 
-  $sql = mysql_query("SELECT * from deductions WHERE deduction_id='1'");
-  while($row = mysql_fetch_array($sql))
+  $sql = mysqli_query($c, "SELECT * from deductions WHERE deduction_id='1'");
+  while($row = mysqli_fetch_array($sql))
   {
     $phil = $row['philhealth'];
     $bir = $row['bir'];
@@ -79,9 +79,9 @@
       <?php
         $id=$_REQUEST['emp_id'];
         $query = "SELECT * from employee where emp_id='".$id."'";
-        $result = mysql_query($query) or die ( mysql_error());
+        $result = mysqli_query($c, $query) or die ( mysqli_error());
 
-        while ($row = mysql_fetch_assoc($result))
+        while ($row = mysqli_fetch_assoc($result))
         {
 
           ?>

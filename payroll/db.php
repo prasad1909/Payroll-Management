@@ -1,9 +1,9 @@
 <?php
-	$c= mysqli_connect('localhost', 'root', '','payroll');
+	$c= mysqli_connect('localhost', 'root', 'Praraj19','payroll');
 
 	if (!$c)
 	{
-		die("Database Connection Failed" . mysql_error());
+		die("Database Connection Failed" . mysqli_error());
 	}
 
 ?>

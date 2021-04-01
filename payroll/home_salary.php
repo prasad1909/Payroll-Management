@@ -4,7 +4,7 @@
 ?>
 
 <?php
-$conn = mysqli_connect('localhost', 'root', '','payroll');
+$conn = mysqli_connect('localhost', 'root', 'Praraj19','payroll');
   $query  = mysqli_query($conn,"SELECT * from overtime");
   while($row=mysqli_fetch_array($query))
   {

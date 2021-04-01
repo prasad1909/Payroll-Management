@@ -98,15 +98,15 @@
                       <tbody>
                         <?php
 
-                          $conn = mysqli_connect('localhost', 'root', '','payroll');
+                          $conn = mysqli_connect('localhost', 'root', 'Praraj19','payroll');
                           if (!$conn)
                           {
-                            die("Database Connection Failed" . mysql_error());
+                            die("Database Connection Failed" . mysqli_error());
                           }
 
                           
                           
-                          $query=mysqli_query($conn,"select * from employee ORDER BY emp_id asc")or die(mysql_error());
+                          $query=mysqli_query($conn,"select * from employee ORDER BY emp_id asc")or die(mysqli_error());
                           while($row=mysqli_fetch_array($query))
                           {
                             $id     =$row['emp_id'];
